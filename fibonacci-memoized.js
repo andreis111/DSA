@@ -20,6 +20,23 @@
 // Output: 3
 // Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
 
+// const memo = {};
+// function fib(n) {
+//   if (n <= 1) {
+//     return n;
+//   } else if (memo[n]) {
+//     return memo[n];
+//   } else {
+//     let result = fib(n - 1) + fib(n - 2);
+//     memo[n] = result;
+//     return result;
+//   }
+// }
+
+// console.log(fib(5));
+
+var startTime = Date.now();
+
 const memo = {};
 function fib(n) {
   if (n <= 1) {
@@ -33,4 +50,6 @@ function fib(n) {
   }
 }
 
-console.log(fib(5));
+console.log(fib(500));
+
+console.log("Elapsed time (ms): " + (Date.now() - startTime));
