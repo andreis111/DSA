@@ -89,6 +89,16 @@ class LinkedList {
 
     return null;
   }
+
+  printList() {
+    let currentNode = this.head;
+    const values = [];
+    while (currentNode) {
+      values.push(currentNode.value);
+      currentNode = currentNode.next;
+    }
+    console.log(values);
+  }
 }
 
 class Node {
@@ -104,6 +114,8 @@ const list = new LinkedList();
 list.append(1);
 list.append(2);
 list.append(3);
+list.append(4);
+list.append(5);
 
 // list.prepend(0)
 // list.prepend(-1)
@@ -120,3 +132,4 @@ list.append(3);
 // list.deleteHead() // 1
 
 // list.deleteTail() // null
+list.printList();
